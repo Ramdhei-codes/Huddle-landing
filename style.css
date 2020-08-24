@@ -35,4 +35,109 @@
     content: "\e900";
   }
 
-  
+  .background-img{
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      
+  }
+
+  body{
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: hsl(257, 40%, 49%);
+      background-image: url('./images/bg-desktop.svg');
+      background-position: auto;
+      background-size: 100%;
+      height: 100vh;
+  }
+
+  .container{
+    height: 100%;
+    padding: 0 70px;
+      color: white;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: 25% 1fr 120px;
+      grid-template-areas: "header header"
+                            "main main"
+                            "footer footer";
+
+    
+    
+  }
+
+  .header{
+      grid-area: header;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .header__logo{
+    width: 220px;
+  }
+
+  .main{
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      column-gap: 4%;
+      padding-top: 10px;
+  }
+
+
+  .main__information{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .main__title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.7em;
+    margin: 0;
+    margin-top: 1.5em;
+  }
+
+  .main__description{
+    line-height: 1.7em;
+    font-size: 1.2em;
+  }
+
+  .main__register{
+    width: 200px;
+    height: 50px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .footer{
+      grid-area: footer;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+  .footer__link{
+    color: white;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 1.3em;
+    padding: 0.4em;
+    margin: 0 7px;
+  }
